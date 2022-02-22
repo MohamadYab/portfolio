@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import '../App.css';
 import { useViewport } from '../use-Viewport';
 import Logo from '../components/Logo.js'
+import ContactForm from './ContactForm';
 
 function Mobile() {
   const { isDesktop } = useViewport();
@@ -59,13 +60,15 @@ function Mobile() {
           </ul>
         </nav>
       </div>
-      <div className='container'>
+      <div className=''>
         <section id="About">About</section>
         <section id="Projects">Projects</section>
         <section id="Education">Education</section>
         <section id="Skills">Skills</section>
         <section id="Hobbies">Hobbies</section>
-        <section id="Contact">Contact</section>
+        <section id="Contact">
+          <ContactForm />
+        </section>
       </div>
     </div>
   );
