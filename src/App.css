@@ -201,6 +201,13 @@ textarea {
   cursor: pointer;
 }
 
+#arrow-icon {
+  height: 100%;
+  position: relative;
+  top: 4px;
+  margin: 0px 12px;
+}
+
 
 .gradient {
   background: rgb(9,19,73);
