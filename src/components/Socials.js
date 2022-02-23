@@ -2,7 +2,7 @@ import React from 'react';
 
 const Socials = () => {
     return (
-        <div className='container socials-container'>
+        <div className='socials-container'>
             <a href="https://github.com/MohamadYab" target='_blank'>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     width="80px" height="80px" viewBox="0 0 512 512"

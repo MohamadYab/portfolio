@@ -68,8 +68,10 @@ function Mobile() {
       <section id="Skills">Skills</section>
       <section id="Hobbies">Hobbies</section>
       <section id="Contact">
-        <ContactForm />
-        <Socials />
+        <div className='container'>
+          <ContactForm />
+          <Socials />
+        </div>
       </section>
     </div>
   );

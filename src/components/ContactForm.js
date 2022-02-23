@@ -4,7 +4,7 @@ import Arrow from '../icons/Arrow';
 const ContactForm = () => {
     // !NOTE: Remove Autocomplete='off' when finished.
     return (
-        <form action='POST' id='contact-form' className='container' autocomplete='off'>
+        <form action='POST' id='contact-form' autocomplete='off'>
             <input type='text' name='name' id='name-input' placeholder='Name:' required />
             <input type='email' name='email' id='email-input' placeholder='Email:' required />
             <textarea type='text' name='message' id='message-input' placeholder='Message:' required />
