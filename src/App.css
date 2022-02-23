@@ -153,6 +153,9 @@ section:nth-child(odd) {
   color: white;
 }
 /* ========== Form ========== */
+#contact-form {
+  margin-bottom: 14px;
+}
 #contact-form input, textarea {
   display: block;
   width: 100%;
@@ -208,6 +211,13 @@ textarea {
   margin: 0px 12px;
 }
 
+/* ========== Form ========== */
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  gap: 14px;
+}
 
 .gradient {
   background: rgb(9,19,73);
