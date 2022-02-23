@@ -35,26 +35,16 @@
 }
 /* ========== Logo ========== */
 .logo-container {
-  font-size: 1.25rem;
-  position: relative;
-  display: inline;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .logo {
   display: inline;
   color: white;
-  font-size: 1em;
+  font-size: 1.25rem;
   font-family: sans-serif;
   font-weight: bold;
   border-bottom: #c9bc26 6px solid;
-}
-
-.typing {
-  color: white;
-  position: absolute;
-  bottom: 7px;
-  right: -22px;
 }
 
 /* ========== Hamburger ========== */
@@ -223,19 +213,58 @@ textarea {
   gap: 14px;
 }
 
-.gradient {
-  background: rgb(9,19,73);
-  background: -moz-linear-gradient(45deg, rgba(9,19,73,1) 0%, rgba(7,8,11,1) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(9,19,73,1) 0%, rgba(7,8,11,1) 100%);
-  background: linear-gradient(45deg, rgba(9,19,73,1) 0%, rgba(7,8,11,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#091349",endColorstr="#07080b",GradientType=1);
-}
-.desktop-contact {
-  width: 33%;
-  height: 100vh;
+/* ========== Desktop ========== */
+@media (min-width: 1024px) {
+
+  /* ========== Contact Section ========== */
+  .desktop-contact {
+    width: 33%;
+    height: 100vh;
+    box-shadow: 2px 0px 15px 2px black;
+    position: relative;
+    z-index: 2;
+  }
+
+  .gradient {
+    max-width: inherit;
+    height: inherit;
+
+    background: rgb(9,19,73);
+    background: -moz-linear-gradient(45deg, rgba(9,19,73,1) 0%, rgba(7,8,11,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(9,19,73,1) 0%, rgba(7,8,11,1) 100%);
+    background: linear-gradient(45deg, rgba(9,19,73,1) 0%, rgba(7,8,11,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#091349",endColorstr="#07080b",GradientType=1);
+  }
+
+  .rose-image {
+    max-width: inherit;
+    height: inherit;
+    background-image: url('./images/Rose.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+
+  .desktop-contact-info {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
 }
 
-/* Desktop */
+/* ========== Very Large Screens ========== */
+@media (min-width: 1536px) {
+  .desktop-contact {
+    width: 30%;
+  }
+} 
+
 /* @media (min-width: 640px) {
   
 }
@@ -243,15 +272,9 @@ textarea {
 @media (min-width: 768px) {
 
 }
-@media (min-width: 1024px) {
-  .contact-info {
-    display: none;
-  }
-}
+
 @media (min-width: 1280px) {
 
 }
-@media (min-width: 1536px) {
-
-} */
+*/
 
