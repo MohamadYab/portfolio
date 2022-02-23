@@ -7,7 +7,7 @@ const Typing = () => {
             preserveAspectRatio="xMidYMid meet" className="typing">
 
             <g transform="translate(0,97) scale(0.1,-0.1)"
-            fill="currentColor" stroke="none">
+            fill="currentcolor" stroke="none">
             <path d="M0 915 l0 -55 55 0 c89 0 95 -11 95 -175 l0 -135 -75 0 -75 0 0 -55
             0 -55 75 0 75 0 0 -145 c0 -175 -5 -185 -95 -185 l-55 0 0 -56 0 -57 73 5 c45
             3 85 12 104 23 29 17 31 17 57 0 17 -12 54 -20 102 -23 l74 -5 0 57 0 56 -55
