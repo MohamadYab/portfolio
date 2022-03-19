@@ -110,19 +110,19 @@ const Tabs = () => {
     return(
         <nav className='slider' ref={slider}>
             <div className="slider-item scaleFont"
-                id='about' ref={addToTabsRefs} >About</div>
+                id='About' ref={addToTabsRefs} >About</div>
 
             <div className="slider-item"
-                id='projects' ref={addToTabsRefs} >Projects</div>
+                id='Projects' ref={addToTabsRefs} >Projects</div>
 
             <div className="slider-item"
-                id='education' ref={addToTabsRefs} >Education</div>
+                id='Education' ref={addToTabsRefs} >Education</div>
 
             <div className="slider-item"
-                id='skills' ref={addToTabsRefs} >Skills</div>
+                id='Skills' ref={addToTabsRefs} >Skills</div>
 
             <div className="slider-item"
-                id='hobbies' ref={addToTabsRefs} >Hobbies</div>
+                id='Hobbies' ref={addToTabsRefs} >Hobbies</div>
         </nav>
     );
 }
