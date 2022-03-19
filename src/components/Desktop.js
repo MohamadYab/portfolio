@@ -1,14 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import Logo from '../components/Logo.js'
 import ContactForm from './ContactForm';
+import Pages from './Pages';
 import Socials from './Socials';
 import Tabs from './Tabs';
 
 function Desktop() {
-  const test = () => {
-   
-  }
 
   return (
     <div className="App desktop">
@@ -29,8 +27,9 @@ function Desktop() {
 
       {/** Content Section */}
       <div className='desktop'>
-        <div className="container red" onClick={test}>
+        <div className="container red">
           <Tabs />
+          <Pages />
         </div>
       </div>
     </div>
