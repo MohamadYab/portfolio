@@ -58,6 +58,9 @@ const Tabs = () => {
 
     const slideLeft = (slide) => {
         if(slide > 0){
+            // Remove listeners only when the clicked page is not the current page...
+            removeEvtListeners();
+
             tabsRefs.current.forEach(item => {
                 item.style.setProperty('--endAnimation', `-${slide * 100}%`);
                 item.style.animation = `slideLeft 1.05s ease-in-out`;
@@ -101,7 +104,6 @@ const Tabs = () => {
 
     const handleClick = (tab) => {
         // Remove Click Event listeners to prevent clicking during animation...
-        removeEvtListeners(); 
         let tabsNum = tabIndex(tab.target);
         cloneTabs(tabsNum);
         slideLeft(tabsNum);
