@@ -1,12 +1,10 @@
 import React, { useRef } from 'react';
 import '../App.css';
-import { useViewport } from '../use-Viewport';
 import Logo from '../components/Logo.js'
 import ContactForm from './ContactForm';
 import Socials from './Socials';
 
 function Mobile() {
-  const { isDesktop } = useViewport();
   const menuBtn = useRef(null);
   const mobileNav = useRef(null);
   

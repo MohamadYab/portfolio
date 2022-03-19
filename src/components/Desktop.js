@@ -1,13 +1,11 @@
 import React from 'react';
 import '../App.css';
-import { useViewport } from '../use-Viewport';
 import Logo from '../components/Logo.js'
 import ContactForm from './ContactForm';
 import Socials from './Socials';
 import Tabs from './Tabs';
 
 function Desktop() {
-  const { isDesktop } = useViewport();
   const test = () => {
    
   }
