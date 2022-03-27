@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Hobbies = () => {
+const Hobbies = ({className}) => {
     return(
-        <div className="page">
+        <div className={ `page ${className}`}>
             Hobbies
         </div>
     );

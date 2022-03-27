@@ -1,8 +1,8 @@
 import React from 'react';
 
-const About = () => {
+const About = ({className}) => {
     return(
-        <div className="page">
+        <div className={ `page ${className}`}>
             About
         </div>
     );

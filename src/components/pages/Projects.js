@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Projects = () => {
+const Projects = ({className}) => {
     return(
-        <div className="page">
+        <div className={ `page ${className}`}>
             Projects
         </div>
     );
