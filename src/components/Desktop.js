@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../App.css';
 import Logo from '../components/Logo.js'
 import ContactForm from './ContactForm';
-import Pages from './Pages';
 import Socials from './Socials';
 import Tabs from './Tabs';
+import Pages from './Pages';
 
 function Desktop() {
 
@@ -27,7 +27,7 @@ function Desktop() {
 
       {/** Content Section */}
       <div className='desktop'>
-        <div className="container red">
+        <div className="container">
           <Tabs />
           <Pages />
         </div>
