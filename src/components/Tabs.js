@@ -102,10 +102,15 @@ const Tabs = () => {
         }
     }
 
+    const updateURL = (hashValue) => {
+        window.location.hash = hashValue;
+    }
+
     const handleClick = (tab) => {
         // Remove Click Event listeners to prevent clicking during animation...
         let tabsNum = tabIndex(tab.target);
         cloneTabs(tabsNum);
+        updateURL(tab.target.getAttribute('id'));
         slideLeft(tabsNum);
     }
 
