@@ -285,6 +285,17 @@ textarea {
     font-size: 1em;
     transition: font-size 1.05s ease-in-out;
     cursor: pointer;
+    position: relative;
+  }
+
+  .slider-item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    height: 3px;
+    background: black;
   }
 
   .scaleFont {
@@ -312,14 +323,30 @@ textarea {
   }
 
   .page {
+    font-size: 1.2rem;
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0%;
     transition: left 1.05s ease-in-out;
-    background-color: green;
+    padding-top: 20px;
   }
   
+  .about-me {
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .me {
+    width: 100%;
+    height: 400px;
+    max-width: 750px;
+    background-color: rgb(126, 126, 126);
+    margin-top: 20px;
+    float: right;
+  }
+  
+  /* ========== Animation ========== */
   .fade-in {
     left: -100%;
   }
