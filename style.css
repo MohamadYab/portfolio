@@ -85,6 +85,10 @@ select {
     justify-content: center;
 }
 
+.align-items {
+    align-items: center;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
