@@ -95,7 +95,7 @@ select {
 }
 
 .logo {
-    padding: 5vh 0;
+    margin: 5vh 0;
     font-size: 1.4rem;
     letter-spacing: .1rem;
 }
@@ -133,6 +133,7 @@ body {
 /* Background */
 #background {
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: var(--purple);
@@ -231,6 +232,9 @@ body {
     transition: clip-path .5s ease-in-out;
 }
 
+#work, #contact {
+    margin-top: 15vh;
+}
 /* About Me Page */
 #about-me {
     margin: 6vh 0px 8vh 0px;
@@ -264,7 +268,7 @@ body {
 }
 
 .skills {
-    width: 80%;
+    width: 100%;
     height: 64px;
     margin-bottom: 3vh;
     padding: 16px;
@@ -279,7 +283,7 @@ body {
 }
 
 .logos {
-    height: inherit;
+    height: 48px;
     width: 100%;
 }
 
@@ -344,6 +348,10 @@ body {
         scrollbar-width: none;  /* Firefox */
     }
 
+    .menu-btn{
+        display: none;
+    }
+
     .navigation{
         width: 146px;
         position: fixed;
@@ -352,6 +360,7 @@ body {
         transform: translateY(-50%);
         background-color: unset;
         height: 150px;
+        clip-path: unset;
     }
 
     .nav-item {
@@ -394,12 +403,10 @@ body {
     /* Pages */
     .pages-container {
         height: 100vh;
-        
     }
 
     .page {
         height: 100vh;
-        
     }
 
     /* About Page */
@@ -409,9 +416,14 @@ body {
 
     #skills {
         flex: 0 0 50%;
+        width: 80%;
     }
 
     #about-me {
         max-width: 80%;
+    }
+
+    .logos {
+        height: 64px;
     }
 }
