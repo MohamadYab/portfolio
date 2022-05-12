@@ -155,11 +155,20 @@ body {
 
 /* Navigation */
 /* ========== Hamburger ========== */
+.nav-btn {
+
+}
+
 .menu-btn {
     position: fixed;
-    top: 6vh;
-    right:6vw;
+    top: 4vh;
+    right:4vw;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     transition: transform .5s ease-in-out;
     z-index: 1;
 }
@@ -201,6 +210,7 @@ body {
 
 .navigation {
     position: fixed;
+    top: 0;
     width: 100%;
     height: 250px;
     display: flex;
@@ -210,6 +220,7 @@ body {
     background-color: var(--white);
     color: var(--black);
     clip-path: inset(0 0 100% 0);
+    transition: clip-path .5s ease-in-out;
 }
 
 .nav-item {
@@ -229,7 +240,7 @@ body {
 }
 
 .navigation.open-nav {
-    transition: clip-path .5s ease-in-out;
+    clip-path: inset(0 0 0% 0);
 }
 
 #work, #contact {
