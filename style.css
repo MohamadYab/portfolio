@@ -180,8 +180,8 @@ body {
     position: absolute;
     width: 35px;
     height: 4px;
-    background: var(--white);
-    transition: transform .5s ease-in-out;
+    background-color: var(--white);
+    transition: transform .5s ease-in-out, background-color .5s ease-in-out;
 }
 .menu-btn__burger::before {
     transform: translateY(-10px);
