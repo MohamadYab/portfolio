@@ -64,7 +64,7 @@
 
     <main class="pages-container text-white container">
         <section id="about" class="page about">
-            <h1 class="text-white logo" >MOHAMAD YABROUDI</h1>
+            <h1 class="text-white logo header" >MOHAMAD YABROUDI</h1>
             <div id="about-info" >
                 <h2 class="title" >Your next step’s developer!</h2>
                 <h3 id="journey" class="subtitle" >A journey of a thousand miles begins with a single
@@ -177,8 +177,8 @@
             </section>
         </section>
         <section id="work" class="page">
-            <h1 class="title">My Work</h1>
-            <div class="flex flex-wrap h-center">
+            <h1 class="title header">My Work</h1>
+            <div class="flex flex-wrap justify-content">
                 <div class="card project">
                     <img />
                     <h2>Project's Name</h2>
@@ -193,7 +193,7 @@
                         <button>Visit</button>
                     </div>
                 </div>
-
+                
                 <div class="card project">
                     <img />
                     <h2>Project's Name</h2>
@@ -211,7 +211,25 @@
             </div>
         </section>
         <section id="contact" class="page">
-            <h1 class="title">Contact Me</h1>
+            <h1 class="title header">Contact Me</h1>
+            <div class="flex flex-wrap">
+                <form class="form" >
+                    <label for="name">Name</label>
+                    <input type="text" class="card" id="name"/>
+                    <label for="email">Email</label>
+                    <input type="email" class="card" id="email"/>
+                    <label for="message">Message</label>
+                    <textarea type="text" class="card" id="message"></textarea>
+                    <button class="card submit" >Send Email</button>
+                </form>
+
+                <div class="socials">
+                    <div>
+                        Icon
+                        <p>Text</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <script src="main.js"></script>
