@@ -179,7 +179,7 @@ body {
     width: 40px;
     height: 40px;
     transition: transform .5s ease-in-out;
-    z-index: 1;
+    z-index: 2;
 }
 .menu-btn__burger {
     width: 35px;
@@ -230,6 +230,7 @@ body {
     color: var(--black);
     clip-path: inset(0 0 100% 0);
     transition: clip-path .5s ease-in-out;
+    z-index: 1;
 }
 
 .nav-item {
@@ -404,6 +405,7 @@ body {
     height: 400px;
     color: var(--black);
     margin: 25px;
+    z-index: 0;
 }
 
 .project-info {
@@ -560,8 +562,65 @@ body {
 .social path {
     fill: currentColor;
 }
+
+/* Large Phone Version*/
+@media screen and (min-width: 600px) {
+    .logos {
+        height: 48px;
+    }
+}
+
+/* Large Phone Landscape Version*/
+@media screen and (min-width: 800px) {
+    .project {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn {
+        margin-right: 0px;
+    }
+
+    .socials {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: unset;
+    }
+
+    .social {
+        width: auto;
+        flex: 1 0 50%;
+    }
+}
+
+/* Large Phone Landscape Version*/
+@media screen and (min-width: 925px) {
+    #contact {
+        padding-bottom: 100px;
+    }
+
+    .contact {
+        flex-wrap: nowrap;
+        gap: 56px;
+    }
+    
+    .form {
+        margin: 0px;
+    }
+
+    .socials {
+        display: block;
+        width: auto;
+        margin-bottom: 0px;
+    }
+
+    .justify-content {
+        justify-content: left;
+    }
+}
+
 /* Desktop Version*/
-@media screen and (orientation:landscape) and (min-width: 640px){
+@media screen and (min-width: 1124px) {
 
     /* Navigation */
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -637,20 +696,62 @@ body {
     }
 
     /* About Page */
+    .about {
+        width: 100%;
+        display: flex;
+        gap: 2%;
+    }
+
     #about-info {
-        flex: 0 0 50%;
+        max-width: 520px;
+        flex: 0 1 50%;
     }
 
     #skills {
-        flex: 0 0 50%;
+        flex: 0 1 35%;
         width: 80%;
     }
 
     #about-me {
         max-width: 80%;
+        margin: 15vh 0px;
+        font-size: 1.2rem;
+    }
+
+    .specialities {
+        display: none;
     }
 
     .logos {
-        height: 64px;
+        height: 48px;
+    }
+
+    /* Projects & Contacts Page */
+    .socials {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #about-info {
+        max-width: 700px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+    .center {
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    #skills {
+        flex:1 1 50%;
+    }
+
+    #about-me {
+        margin: 12vh 0px;
+        font-size: 1.5rem;
     }
 }
