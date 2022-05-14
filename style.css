@@ -75,6 +75,7 @@ a {
     --white: white;
     --black: black;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Utility classes */
@@ -622,6 +623,15 @@ body {
 /* Desktop Version*/
 @media screen and (min-width: 1124px) {
 
+    :root {
+        scroll-snap-type: y mandatory;
+    }
+
+    .page {
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+
     /* Navigation */
     /* Hide scrollbar for Chrome, Safari and Opera */
     body::-webkit-scrollbar {
@@ -689,10 +699,6 @@ body {
     /* Pages */
     .pages-container {
         min-height: 100vh;
-    }
-
-    .page {
-        height: 100vh;
     }
 
     /* About Page */
