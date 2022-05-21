@@ -63,5 +63,6 @@ navItems.forEach(item => {
     item.addEventListener('click', (e) => {
         e.stopPropagation();
         jumptToSection(item)
-    })
+        toggleMobileNav();
+    });
 })
