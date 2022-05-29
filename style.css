@@ -15,7 +15,7 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
@@ -52,7 +52,7 @@ a {
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
+  html {
    scroll-behavior: auto;
   }
   
@@ -76,18 +76,30 @@ a {
     --white: white;
     --black: black;
 
+    /* Logo Font-Size */
+    --logo-minimum-fs: 1.4rem;
+    --logo-preferred-fs: .5rem + 8vw;
+    --logo-maximum-fs: 10rem;
+    
+    /* Profission Font-Size */
+    --profission-minimum-fs: .5rem;
+    --profission-preferred-fs: .5rem + 4vw;
+    --profission-maximum-fs: 2.9rem;
+    
+    /* Text Font-Size */
+    --text-minimum-fs: .5rem;
+    --text-preferred-fs: .4rem + 3vw;
+    --text-maximum-fs: 1.2rem;
+    
+    /* Skills Font-Size */
+    --skills-minimum-fs: .5rem;
+    --skills-preferred-fs: .2rem + 3vw;
+    --skills-maximum-fs: 1.1rem;
+    
     /* Font */
     font-family: 'Heebo', sans-serif;
     color: var(--white);
     font-weight: 400;
-
-    /* Logo Font-Size */
-    --logo-minimum-fs: 1.4rem;
-    --logo-preferred-fs: .5rem + 8.3333vw;
-    --logo-maximum-fs: 4rem;
-    
-
-    scroll-behavior: smooth;
 }
 
 /* Utility classes */
@@ -114,35 +126,30 @@ a {
 .container {
     width: 80%;
     margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:6vh;
+    position: relative;
 }
 
 .page {
-    min-height: 520px;
-}
-
-.logo {
-    width: 50%;
-    font-size: clamp(var(--logo-minimum-fs), var(--logo-preferred-fs), var(--logo-maximum-fs));
-    letter-spacing: .1rem;
-    line-height: clamp(var(--logo-minimum-fs), .5rem + 4.3333vw, var(--logo-maximum-fs));
-    font-weight: bold;
+    min-height: 33.33vh;
+    padding: 8vh 0;
 }
 
 .title {
     font-size: 2.2rem;
 }
 
-.subtitle {
-    font-size: 1.3rem;
-    font-weight: 300;
+.go-top {
+    position: fixed;
+    bottom: 8vh;
+    right: 8vw;
 }
 
-.text-white {
-    color: var(--white);
-}
-
-.text-black {
-    color: var(--black);
+.display.go-top {
+    display: block;
 }
 
 /* Pages Background Colours */
@@ -160,6 +167,52 @@ a {
 
 /* XS Mobile Phones */
 /* About Me Page */
+.logo {
+    width: 50%;
+    font-size: clamp(var(--logo-minimum-fs), var(--logo-preferred-fs), var(--logo-maximum-fs));
+    letter-spacing: .1rem;
+    line-height: clamp(var(--logo-minimum-fs), .5rem + 6vw, 8rem);
+    font-weight: bold;
+}
+
+.f-name {
+    margin-left: -0.3rem;
+}
+
+.profission {
+    color: var(--yellow);
+    font-size: clamp(var(--profission-minimum-fs), var(--profission-preferred-fs), var(--profission-maximum-fs));
+    font-weight: 300;
+}
+
+.journey {
+    font-size: clamp(var(--text-minimum-fs), var(--text-preferred-fs), var(--text-maximum-fs));
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    direction: rtl;
+    padding-right: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 40px;
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--gray);
+    font-size: clamp(var(--skills-minimum-fs), var(--skills-preferred-fs), var(--skills-maximum-fs));
+}
+.skills li:last-of-type {
+    list-style-type: none;
+}
+
+.contact-me, .see-my-work {
+    font-size: clamp(.4rem, .3rem + 3vw, var(--text-maximum-fs));
+}
+
 .contact-me {
     background-color: var(--yellow);
     color: var(--black);
@@ -193,15 +246,6 @@ a {
 
 #about-info {
     margin-bottom: 8vh;
-}
-
-.skills {
-    width: 100%;
-    height: 64px;
-    margin-bottom: 3vh;
-    padding: 16px;
-    color:black;
-    
 }
 
 /*.Contact Page */
@@ -281,8 +325,16 @@ a {
 }
 
 /* Large Phone Version*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1020px) {
+    .f-name {
+        margin-left: -0.5rem;
+    }
 
+    .navigation {
+        position: absolute;
+        top: 16px;
+        right: -4px;
+    }
 }
 
 /* Large Phone Landscape Version*/
