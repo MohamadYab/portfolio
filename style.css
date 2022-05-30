@@ -96,6 +96,11 @@ a {
     --skills-preferred-fs: .2rem + 3vw;
     --skills-maximum-fs: 1.1rem;
     
+    /* Socials Icons Height */
+    --socials-minimum-fs: 1rem;
+    --socials-preferred-fs: 1rem + 3vw;
+    --socials-maximum-fs: 3rem;
+    
     /* Font */
     font-family: 'Heebo', sans-serif;
     color: var(--white);
@@ -103,26 +108,6 @@ a {
 }
 
 /* Utility classes */
-.flex {
-    display: flex;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.justify-content {
-    justify-content: center;
-}
-
-.align-items {
-    align-items: center;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
 .container {
     width: 80%;
     margin: 0px auto;
@@ -276,11 +261,16 @@ a {
 }
 /*.Contact Page */
 /*.Contact Form */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
 .form {
-    width: 80%;
+    width: 100%;
     max-width: 480px;
     height: 400px;
-    margin: 24px auto;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -292,7 +282,7 @@ a {
 
 .form input, .form textarea {
     width: 100%;
-    margin: 0px 0px 16px 0px;
+    margin-bottom: 16px;
     padding: 16px;
 }
 
@@ -330,24 +320,47 @@ a {
 
 /* Socials */
 .socials {
-    width: 80%;
     max-width: 480px;
     flex-grow: 0;
     flex-shrink: 0;
-    margin: 25px auto;
 }
 
 .social {
-    width: 100%;
     height: 64px;
-    color: var(--black);
     display: flex;
     gap: 25px;
     align-items: center;
 }
 
-.social path {
+.icon {
+    height: clamp(var(--socials-minimum-fs), var(--socials-preferred-fs), var(--socials-maximum-fs));
+}
+
+.icon path {
     fill: currentColor;
+}
+
+/* Large Phone Landscape Version*/
+@media screen and (min-width: 800px) {
+    .contact {
+        flex-wrap: nowrap;
+    }
+
+    .socials {
+        margin-top: 16px;
+        margin-left: 24px;
+    }
+
+    .social-text {
+        display: none;
+    }
+}
+
+/* Large Phone Landscape Version*/
+@media screen and (min-width: 925px) {
+    .contact {
+        padding-bottom: 100px;
+    }
 }
 
 /* Large Phone Version*/
@@ -361,56 +374,21 @@ a {
         top: 16px;
         right: -4px;
     }
-}
 
-/* Large Phone Landscape Version*/
-@media screen and (min-width: 800px) {
-    .socials {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: unset;
-    }
-
-    .social {
-        width: auto;
-        flex: 1 0 50%;
-    }
-}
-
-/* Large Phone Landscape Version*/
-@media screen and (min-width: 925px) {
-    .contact {
-        padding-bottom: 100px;
-    }
-
-    .contact {
-        flex-wrap: nowrap;
-        gap: 56px;
-    }
-    
-    .form {
-        margin: 0px;
-    }
-
-    .socials {
-        display: block;
-        width: auto;
-        margin-bottom: 0px;
-    }
-
-    .justify-content {
-        justify-content: left;
+    .social-text {
+        display: inline-block;
     }
 }
 
 /* Desktop Version*/
 @media screen and (min-width: 1124px) {
     /* Projects &.Contacts Page */
+    .line-break {
+        display: block;
+        border: 3px solid var(--white);
+        border-radius: 3px;
+    }
     .socials {
         margin-left: 0px;
     }
-}
-
-@media screen and (min-width: 1500px) {
-    
 }
