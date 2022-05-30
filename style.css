@@ -208,7 +208,6 @@ a {
     flex-grow: 0;
     flex-shrink: 0;
     margin-right: 40px;
-    font-size: .8rem;
     font-weight: 300;
     color: var(--gray);
     font-size: clamp(var(--skills-minimum-fs), var(--skills-preferred-fs), var(--skills-maximum-fs));
@@ -256,6 +255,25 @@ a {
     margin-bottom: 8vh;
 }
 
+/* Work Page */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects li {
+    flex: 1 1 8.8rem;
+}
+
+.project {
+    font-size: clamp(var(--text-minimum-fs), var(--text-preferred-fs), var(--text-maximum-fs));
+}
+
+.hint {
+    font-weight: 300;
+    color: var(--gray);
+    font-size: clamp(var(--skills-minimum-fs), var(--skills-preferred-fs), var(--skills-maximum-fs));
+}
 /*.Contact Page */
 /*.Contact Form */
 .form {
