@@ -39,6 +39,11 @@ const pageScroll = debounce(() => {
     goTop.classList.add('display-to-top');
 });
 
+const scrollTop = () => {
+    window.scrollTo({
+        top: 0,
+    })
+}
 /** Sending Form */
 const submitForm = (e) => {
     e.preventDefault();
@@ -64,6 +69,8 @@ const submitForm = (e) => {
 
 /** Event Listeners */
 window.addEventListener('scroll', pageScroll);
+
+goTop.addEventListener('click', scrollTop);
 
 navItems.forEach(item => {
     item.addEventListener('click', (e) => {
