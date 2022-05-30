@@ -143,12 +143,20 @@ a {
 }
 
 .go-top {
+    display: none;
     position: fixed;
     bottom: 8vh;
     right: 8vw;
+    background-color: #6C2BD9;
+    padding: 8px 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    text-align: center;
+    opacity: .8;
+    filter: drop-shadow(0px 4px #5E26BF)
 }
 
-.display.go-top {
+.display-to-top.go-top {
     display: block;
 }
 

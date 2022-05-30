@@ -4,7 +4,8 @@
 const workPage = document.querySelector('#work'),
 contactPage = document.querySelector('#contact'),
 navItems = document.querySelectorAll('.nav-item'),
-form = document.querySelector('#form');
+form = document.querySelector('#form'),
+goTop = document.querySelector('.go-top');
 
 const jumptToSection = (item) => {
     switch (item.dataset.page) {
@@ -19,10 +20,28 @@ const jumptToSection = (item) => {
     }
 }
 
+/** Scrolling effect */
+const debounce = (callback, delay = 150) => {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            callback(...args);
+        }, delay);
+    }
+}
+
+const pageScroll = debounce(() => {
+    if(!window.scrollY > 0) {
+        goTop.classList.remove('display-to-top');
+        return;
+    }
+    goTop.classList.add('display-to-top');
+});
+
 /** Sending Form */
 const submitForm = (e) => {
     e.preventDefault();
-    console.log('test');
 
     const formData = new FormData(form);
     formData.append('service_id', 'gmail');
@@ -44,6 +63,8 @@ const submitForm = (e) => {
 }
 
 /** Event Listeners */
+window.addEventListener('scroll', pageScroll);
+
 navItems.forEach(item => {
     item.addEventListener('click', (e) => {
         e.stopPropagation();
