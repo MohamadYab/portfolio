@@ -247,7 +247,7 @@ a {
 /* Work Page */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -263,7 +263,7 @@ a {
 }
 
 .project-description {
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 }
 
 .project-links {
@@ -366,6 +366,10 @@ a {
     flex-shrink: 0;
 }
 
+.line-break {
+    display: none;
+}
+
 .social {
     height: 64px;
     display: flex;
@@ -394,6 +398,10 @@ a {
 
     .social-text {
         display: none;
+    }
+
+    .project-description {
+        margin-bottom: 48px;
     }
 }
 
@@ -431,5 +439,9 @@ a {
     }
     .socials {
         margin-left: 0px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
