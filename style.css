@@ -194,12 +194,15 @@ a {
     flex-grow: 0;
     flex-shrink: 0;
     margin-right: 40px;
-    font-weight: 300;
-    color: var(--gray);
-    font-size: clamp(var(--skills-minimum-fs), var(--skills-preferred-fs), var(--skills-maximum-fs));
 }
 .skills li:last-of-type {
     list-style-type: none;
+}
+
+.skill {
+    font-weight: 300;
+    color: var(--gray);
+    font-size: clamp(var(--skills-minimum-fs), var(--skills-preferred-fs), var(--skills-maximum-fs));
 }
 
 .contact-me, .see-my-work {
@@ -243,22 +246,59 @@ a {
 
 /* Work Page */
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.projects li {
-    flex: 1 1 8.8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 
 .project {
+    background-color: #6C2BD9;
+    min-height: 200px;
     font-size: clamp(var(--text-minimum-fs), var(--text-preferred-fs), var(--text-maximum-fs));
+    padding: 15px;
+    filter: drop-shadow(-8px 8px #4B1F99);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.hint {
-    font-weight: 300;
-    color: var(--gray);
-    font-size: clamp(var(--skills-minimum-fs), var(--skills-preferred-fs), var(--skills-maximum-fs));
+.project-description {
+    margin-bottom: 48px;
+}
+
+.project-links {
+    position: absolute;
+    bottom: 12px;
+}
+
+.visit-site {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--black);
+    width: 104px;
+    height: 40px;
+    padding: 7px 12px;
+    filter: drop-shadow(-4px 4px var(--dark-yellow));
+    cursor: pointer;
+}
+
+.visit-site:hover, .visit-site:focus{
+    background-color: var(--dark-yellow);
+    filter: drop-shadow(-4px 4px var(--yellow));
+}
+
+.visit-site:active {
+    background-color: var(--yellow);
+    filter: drop-shadow(-4px 4px var(--dark-yellow));
+}
+
+.description-list {
+    margin-left: 40px;
+}
+.description-list li {
+    list-style-type: square;
+    font-size: clamp(var(--text-minimum-fs), var(--text-preferred-fs), var(--text-maximum-fs));
+
 }
 /*.Contact Page */
 /*.Contact Form */
