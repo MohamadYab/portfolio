@@ -135,11 +135,11 @@
                 <div class="contact">
                     <form id="form" class="form" >
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name"/>
+                        <input type="text" id="name" name="name" required minlength="1" maxlength="50" />
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" />
+                        <input type="email" id="email" name="email" required minlength="1" maxlength="50" />
                         <label for="message">Message</label>
-                        <textarea type="text" id="message" name="message" ></textarea>
+                        <textarea type="text" id="message" name="message" required></textarea>
                         <button type="submit" class="submit" >Send Email</button>
                     </form>
 
